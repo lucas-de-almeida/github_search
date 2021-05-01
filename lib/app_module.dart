@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+// ignore: implementation_imports
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:github_search/app_widget.dart';
@@ -10,7 +11,6 @@ import 'package:github_search/modules/search/presenter/search/search_page.dart';
 
 class AppModule extends MainModule {
   @override
-  // TODO: implement binds
   List<Bind> get binds => [
         Bind((i) => Dio()),
         Bind((i) => GithubDatasource(i())),
@@ -20,12 +20,10 @@ class AppModule extends MainModule {
       ];
 
   @override
-  // TODO: implement routers
   List get routers => [
         Router('/', child: (_, __) => SearchPage()),
       ];
 
   @override
-  // TODO: implement bootstrap
   Widget get bootstrap => throw AppWidget();
 }

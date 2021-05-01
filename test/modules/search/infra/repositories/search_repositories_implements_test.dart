@@ -2,7 +2,6 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:github_search/modules/search/domain/entities/result_search.dart';
 import 'package:github_search/modules/search/domain/errors/errors.dart';
-import 'package:github_search/modules/search/domain/usecases/search_by_text.dart';
 import 'package:github_search/modules/search/infra/datasource/search_datasource.dart';
 import 'package:github_search/modules/search/infra/models/result_search_model.dart';
 import 'package:github_search/modules/search/infra/repositories/search_repository_implements.dart';

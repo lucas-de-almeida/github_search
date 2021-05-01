@@ -13,7 +13,6 @@ class _SearchPageState extends State<SearchPage> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
     bloc.close();
   }

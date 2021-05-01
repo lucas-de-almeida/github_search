@@ -1,7 +1,5 @@
 import 'dart:convert';
 
-import 'package:json_serializable/json_serializable.dart';
-
 import 'package:github_search/modules/search/domain/entities/result_search.dart';
 
 class ResultSearchModel extends ResultSearch {
