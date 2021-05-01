@@ -1,0 +1,31 @@
+import 'package:dio/dio.dart';
+import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_modular/flutter_modular.dart';
+import 'package:github_search/app_widget.dart';
+import 'package:github_search/modules/search/domain/usecases/search_by_text.dart';
+import 'package:github_search/modules/search/external/datasources/github_datasource.dart';
+import 'package:github_search/modules/search/infra/repositories/search_repository_implements.dart';
+import 'package:github_search/modules/search/presenter/search/search_bloc.dart';
+import 'package:github_search/modules/search/presenter/search/search_page.dart';
+
+class AppModule extends MainModule {
+  @override
+  // TODO: implement binds
+  List<Bind> get binds => [
+        Bind((i) => Dio()),
+        Bind((i) => GithubDatasource(i())),
+        Bind((i) => SearRespositoryimplementation(i())),
+        Bind((i) => SearchByTextImplementation(i())),
+        Bind((i) => SearchBloc(i())),
+      ];
+
+  @override
+  // TODO: implement routers
+  List get routers => [
+        Router('/', child: (_, __) => SearchPage()),
+      ];
+
+  @override
+  // TODO: implement bootstrap
+  Widget get bootstrap => throw AppWidget();
+}
